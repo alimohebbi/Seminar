@@ -1,0 +1,13 @@
+*.aux
+*.log
+*.bbl
+*.blg
+*.ent
+*.out
+*.idx
+*.synctex.gz
+*.pdf
+*.docx
+/images/Thumbs.db
+/sections/*.aux
+/sections/*.log

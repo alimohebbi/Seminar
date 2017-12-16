@@ -1,0 +1,144 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage{graphicx} % inserting images
+%\usepackage{hyperref} % PDF links
+\usepackage{footnote}
+\usepackage{threeparttable}
+\usepackage{setspace} % for switching between double/single space in document
+\usepackage{fancyhdr} % package for changing Headings style
+%\usepackage{endnotes}
+% setting the margins of page
+%\usepackage[top=3cm,right=3cm,bottom=2.5cm,left=2.5cm]{geometry}    
+%\usepackage[pagebackref,colorlinks,citecolor=blue,linkcolor=black]{hyperref}   
+\usepackage[colorlinks,citecolor=blue,linkcolor=black]{hyperref}  
+\usepackage{algorithmic}
+\usepackage{color, colortbl}
+\usepackage{subfig}
+%\usepackage{subfigure}
+\usepackage{amsmath,graphicx}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{tabularx}
+%\usepackage{backref}
+\usepackage{amsthm}
+\usepackage{pseudocode}
+\usepackage{makeidx}
+\usepackage{enumitem}
+\setlist[itemize,1]{label={\fontfamily{cmr}\fontencoding{T1}\selectfont\textbullet}}
+\usepackage{endnotes}
+\usepackage{float}
+\usepackage{xepersian}
+
+
+
+%\usepackage{glossaries}
+
+%\def\backrefpagesname{page(s)}
+\newtheorem{definition}{تعریف}[section]
+%\usepackage[utf8x]{inputenc}
+%\DeclareUnicodeCharacter{200F}{\nobreakspace}%Nonbreaking-space
+\makeindex
+%\makeglossaries
+
+%\let\LTRfootnote=\endnote
+%\renewcommand{\notesname}{\vspace{-16pt}}
+%%%%         
+
+% tell tex engine address of folder containing your pictures
+\graphicspath{{images/}}
+%\let\footnote=\endnote
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+%%%
+% commands to print the page number in header
+\pagestyle{fancy}
+\cfoot{}
+\lhead{\thepage}
+
+% commands related to XePersian package
+%\settextfont[Scale=1.1]{XB Zar}
+%\usepackage{xepersian}
+%\settextfont[Scale=1.1]{B Nazanin}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% چنانچه می‌خواهید اعداد در فرمول‌ها، انگلیسی باشد، خط زیر را غیرفعال کنید
+%\setdigitfont[Scale=1.1]{B Nazanin}
+\setlatintextfont{Times New Roman}
+\definecolor{Gray}{gray}{0.9}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+
+% -------------------------------------
+
+\input{jeld_info}
+\addtolength{\topmargin}{-1.3cm}
+\addtolength{\textheight}{2.1cm}
+\addtolength{\oddsidemargin}{-0.7cm}
+%\addtolength{\evensidemargin}{-1cm}
+\addtolength{\textwidth}{2.1cm}
+\begin{document}
+
+\include{cover_fa}
+%\include{IRTC}
+
+\pagenumbering{arabic}
+\settextfont[Scale=1.1]{B Nazanin}
+
+\input{sections/intro}
+\input{sections/survey}
+\input{sections/method}
+\input{sections/simulation}
+\input{sections/future}
+ 
+%
+
+%\listoffigures
+%\listoftables
+
+% insert each of your chapters with a \inlcude{filename} command as below
+%\doublespacing %yek safheye khali fek konam ijad mikoneh
+%\onehalfspacing
+%\linespread{1.5}
+%----------------------------------------------------------------------
+%\singlespacing
+\linespread{1}
+\small
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+\include{references}
+%
+%% If do not have appendix then comment following 3 lines
+%\doublespacing
+%\appendix
+%%\include{peyvast1}
+%%\include{peyvast2}d
+%% -------------------------------------------------------
+%\pagenumbering{gobble}
+\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0pt}
+
+\newpage 
+\  
+\newline
+\newline
+\renewcommand{\notesname}{ \rightline{\rl{واژه نامه}}}
+\begin{latin}
+ 
+ \renewcommand{\enotesize}{\normalsize}
+ \renewcommand\enoteformat{%
+ 	\raggedright
+ 	 
+ 	\makebox[0pt][r]{\theenmark \ - \rule{0pt}{\dimexpr\ht\strutbox}}%
+ }
+ 
+ 
+\begingroup
+\parindent 0pt
+\parskip 2ex
+\def\enotesize{\normalsize}
+\theendnotes
+\endgroup
+\end{latin}
+
+\end{document}
