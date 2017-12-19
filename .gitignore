@@ -6,7 +6,7 @@
 *.out
 *.idx
 *.synctex.gz
-*.pdf
+Seminar_template.pdf
 *.docx
 /images/Thumbs.db
 /sections/*.aux
