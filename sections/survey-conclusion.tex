@@ -13,13 +13,37 @@
 \begin{table}[H] 
 	\centering \caption{جدول مشخصات پژوهشهای مرور شده در حوزه‌ی پيش بيني خطا}
 	\label{tab:survey}
-	
-	\begin{tabular}{|c|c|c|c|c|c|c|}
+	\newcolumntype{P}[1]{>{\centering\arraybackslash}m{#1}}
+	\renewcommand*{\arraystretch}{1.5}
+	\begin{tabular}{|P{1cm}|P{2cm}|P{3cm}|P{1.5cm}|P{2cm}|P{1.5cm}|P{1cm}|}
 		\hline
 		\hline
 		مقاله & معیار   & تکنیک یادگیری &  ریزدانگی &روش ارزیابی & نوع پروژه‌ها&‌ زبان پروژه‌ها   \\
 		\hline
 		\hline
+		
+		\cite{ostrand2010programmer}
+		 & فرآیند - سنتی & \lr{NBR} & فایل & مشابه \lr{AUCEC} & خصوصی & جاوا \\
+		 \hline
+		
+		\cite{rahman2013and}
+	&	فرآیند - سنتی - شئ‌گرایی & 
+		\lr{Naive Bayes - Logestic Regression - SMV - J48}
+		& فایل &  \lr{AUC - AUCEC - F-Measure} & متن باز& جاوا \\
+
+		\hline
+		\cite{bowes2016mutation}
+		& سنتی - شئ‌گرایی & 
+			\lr{Naive Bayes - Logestic Regression - Random Forest - J48} 
+			&
+			کلاس & غیره & متن باز & جاوا \\
+		\hline
+		\cite{malhotra2014comparative} &
+		سنتی &  
+		\lr{LR - ANN - DT - SVM - CCN - GMDH - GEP} & \lr {NA} & \lr {AUC - Precision} & 
+		متن باز & سی \\
+		\hline
+		
 		
 		
 	
