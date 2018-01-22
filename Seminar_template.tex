@@ -28,8 +28,9 @@
 \setlist[itemize,1]{label={\fontfamily{cmr}\fontencoding{T1}\selectfont\textbullet}}
 \usepackage{endnotes}
 \usepackage{float}
+\usepackage{etoolbox}
 \usepackage[extrafootnotefeatures]{xepersian}
-
+\usepackage[bottom]{footmisc}
 
 
 %\usepackage{glossaries}
@@ -108,7 +109,10 @@
 \small
 \setlength{\parskip}{0pt}
 \setlength{\parsep}{0pt}
+
+
 \include{references}
+
 %
 %% If do not have appendix then comment following 3 lines
 %\doublespacing
@@ -120,28 +124,5 @@
 \fancyhf{} % sets both header and footer to nothing
 \renewcommand{\headrulewidth}{0pt}
 
-\newpage 
-\  
-\newline
-%\newline
-
-\renewcommand{\notesname}{ \rightline{\rl{واژه نامه}}}
-\begin{latin}
- 
- \renewcommand{\enotesize}{\normalsize}
- \renewcommand\enoteformat{%
- 	\raggedright
- 	 
- 	\makebox[0pt][r]{\theenmark \ - \rule{0pt}{\dimexpr\ht\strutbox}}%
- }
- 
- 
-\begingroup
-\parindent 0pt
-\parskip .1em
-\def\enotesize{\normalsize}
-\theendnotes
-\endgroup
-\end{latin}
 
 \end{document}
